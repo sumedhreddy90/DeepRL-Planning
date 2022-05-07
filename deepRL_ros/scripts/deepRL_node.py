@@ -1,5 +1,4 @@
-#!/usr/bin/python2.7
-# Author: Keyu Li <kyli@link.cuhk.edu.hk>
+#!/usr/bin/python3.8
 
 from __future__ import division
 import logging
@@ -278,9 +277,9 @@ class RobotAction(object):
 if __name__ == '__main__':
     begin_travel = False
     # set file dirs
-    model_dir = '/sarl_star_ros/CrowdNav/crowd_nav/data/output/'
-    env_config_file = '/sarl_star_ros/CrowdNav/crowd_nav/data/output/env.config'
-    policy_config_file = '/sarl_star_ros/CrowdNav/crowd_nav/data/output/policy.config'
+    model_dir = '/deepRL_ros/CrowdNav/crowd_nav/data/output'
+    env_config_file = '/deepRL_ros/CrowdNav/crowd_nav/data/output/env.config'
+    policy_config_file = '/deepRL_ros/CrowdNav/crowd_nav/data/output/policy.config'
     if os.path.exists(os.path.join(model_dir, 'resumed_rl_model.pth')):
         model_weights = os.path.join(model_dir, 'resumed_rl_model.pth')
     else:
@@ -293,7 +292,7 @@ if __name__ == '__main__':
     logging.info('Using device: %s', device)
 
     # configure RL policy
-    policy = 'sarl'
+    policy = 'scr'
     phase = 'test'
     env_config = configparser.RawConfigParser()
     env_config.read(env_config_file)
