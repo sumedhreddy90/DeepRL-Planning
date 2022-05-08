@@ -101,3 +101,8 @@ rosrun map_server map_saver -f ~/catkin_ws/src/DeepRl-Planning/deepRL_ros/map/ne
 roslaunch deeprl_ros deepRL_navigation.launch
 ```
 
+# Output
+<img width="1058" alt="rl1" src="https://user-images.githubusercontent.com/24978535/167306806-429c1fb8-16d6-4058-9398-ab185318c3a4.png">
+<img width="1178" alt="rl2" src="https://user-images.githubusercontent.com/24978535/167306807-5b00f2cf-6642-4c1c-bb68-34518586e90b.png">
+<img width="1178" alt="rl3" src="https://user-images.githubusercontent.com/24978535/167306808-de96716b-ebe3-44da-8ac2-979e17a37464.png">
+
