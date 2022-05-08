@@ -1,4 +1,4 @@
-# DeepRL-Planning
+# Deep Reinforcement Learning For Real Autonomous Mobile Robot Navigation In social Environments
 
 ## Simulation 
 
@@ -63,6 +63,41 @@ https://user-images.githubusercontent.com/24978535/167305673-f448dd5b-f8c9-48c2-
 
 ![scr](https://user-images.githubusercontent.com/24978535/167305724-cf05a8f8-c077-4084-8420-3af019e5fac1.gif)
 
+## Hardware 
 
+### Setput Packages and libraries
+1. Install [ROS Noetic](http://wiki.ros.org/noetic).
+2. Create and build a catkin workspace and download the codes into src/:
+```
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin build
+source devel/setup.bash
+cd src
+git clone https://github.com/sumedhreddy90/DeepRL-Planning.git
+```
+## Start the Navigation
 
+0. Before starting the navigation, make sure your PC is connected with Turtlebot3 and the lidar sensor (https://emanual.robotis.com/docs/en/platform/turtlebot3/appendix_lds_01/#lds-01).
+1. Bringup the turtlebot
+
+```
+roslaunch turtlebot3_bringup turtlebot3_robot.launch
+```
+2. Build a map of your environment using [gmapping](http://wiki.ros.org/gmapping) package:
+```
+roslaunch turtlebot3_navigation move_base.launch
+roslaunch turtlebot3_navigation amcl.launch
+```
+Then push or tele-operate the robot to explore the environment and build a map. You will be able to view the real-time navigation in [RVIZ](http://wiki.ros.org/rviz). 
+To save the map, open a new terminal and run:
+```
+mkdir -p ~/catkin_ws/src/DeepRl-Planning/deepRL_ros/map
+rosrun map_server map_saver -f ~/catkin_ws/src/DeepRl-Planning/deepRL_ros/map/new_map
+```
+
+3. Start navigation using the our proposed policy to reach goal location:
+```
+roslaunch deeprl_ros deepRL_navigation.launch
+```
 
