@@ -60,7 +60,7 @@ https://user-images.githubusercontent.com/24978535/167305641-6a4b9027-9dea-48ca-
 https://user-images.githubusercontent.com/24978535/167305673-f448dd5b-f8c9-48c2-b833-3e9947b90ac5.mov
 
 4. Ocupancy Map visualization:
-5. 
+
 ![scr](https://user-images.githubusercontent.com/24978535/167305724-cf05a8f8-c077-4084-8420-3af019e5fac1.gif)
 
 
